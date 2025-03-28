@@ -5,78 +5,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio </title>
     <link rel="stylesheet" href="oi.css">
-    <style>
-        * {
+   /* Resetando estilos básicos */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Definindo a fonte e o fundo */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9; /* Fundo neutro */
     color: #333;
+    line-height: 1.6;
 }
 
+/* Estilo do Header */
 header {
-    background-color: #4e4ec7;
+    background-color: #4e4ec7; /* Azul */
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 40px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+header:hover {
+    background-color: #3a3a9b; /* Azul mais escuro ao passar o mouse */
 }
 
 header h1 {
+    font-size: 2.5em;
     margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
 header p {
     font-size: 1.2em;
+    font-weight: 300;
 }
 
+/* Containers para conteúdo */
 .container {
     width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Estilo das seções */
 section {
-    padding: 20px 0;
+    padding: 40px 0;
+}
+
+section:nth-child(even) {
+    background-color: #fff; /* Alternando fundo entre branco e azul */
+}
+
+section:nth-child(odd) {
+    background-color: #e1e4f7;
 }
 
 h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
+    font-size: 2.5em;
+    color: #4e4ec7;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-align: center;
 }
 
 ul {
     list-style-type: none;
     padding-left: 0;
+    text-align: center;
 }
 
 ul li {
-    margin: 5px 0;
-    font-size: 1.1em;
+    margin: 10px 0;
+    font-size: 1.2em;
+    font-weight: 500;
 }
 
+/* Estilo dos projetos */
 .projeto {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .projeto h3 {
-    font-size: 1.5em;
+    font-size: 1.8em;
+    color: #4e4ec7;
+    margin-bottom: 15px;
 }
 
+/* Estilo do footer */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px 0;
+    font-size: 1em;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
 }
 
-footer p {
-    font-size: 0.9em;
+footer:hover {
+    background-color: #4e4ec7;
 }
-]
-    </style>
+
+/* Animação no carregamento do site */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .projeto {
+        padding: 15px;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+}
+
 </head>
 <body>
 
